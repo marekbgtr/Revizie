@@ -1,33 +1,32 @@
-# Revízie SPS – prenosná ukážka
+# Revízie SPS – pracovná evidencia v1.3
 
-Statická aplikácia pre PC aj mobil. Súbory v tomto balíku sú pripravené na GitHub Pages. Nepotrebuje backend, účet ani databázový server.
+Aplikácia sa spustí bez dát. Vždy načítaj posledný exportovaný XLSX cez Načítať Excel.
 
-## Použitie
+## Spoločná revízna správa
 
-1. Otvor aplikáciu a zvoľ **Načítať Excel**.
-2. Vyber pripravený `Revizie_AppSheet_zaklad_v01.xlsx` (najviac 20 MB).
-3. Filtruj podľa strediska, kategórie a výhľadu 1–36 mesiacov.
-4. Kliknutím na zariadenie otvor kartu. Uprav údaje alebo termín, prípadne pridaj revíziu do histórie.
-5. Klikni **Exportovať Excel**. Stiahnutý súbor ulož na OneDrive ručne.
+1. V Zariadeniach nastav filtre (stredisko, kategória, hľadané umiestnenie).
+2. Označ zariadenia alebo vyber všetky vo filtri. Výber platí cez všetky strany; upozornenie zobrazuje aj počet vybraných mimo filtra.
+3. Zvoľ Priradiť dokument alebo Zapísať spoločnú revíziu.
+4. Zadaj nový dokument alebo vyber existujúci. Pri novom zadaj názov, číslo správy a odkaz na OneDrive alebo cestu k PDF.
+5. Pri revízii vyplň spoločné údaje, každému zariadeniu vyber jeho kontrolu a over navrhnutý nasledujúci termín. Výsledok je spoločný, rozdielne výsledky spracuj oddelene.
+6. Ulož a exportuj Excel. Pri ďalšej práci načítaj tento export.
 
-Údaje sú iba v pamäti aktuálnej stránky. Nie je tu automatická synchronizácia, úložisko pre viacerých používateľov ani trvalé ukladanie v prehliadači. Neexportované zmeny sa po obnovení/zatvorení stránky alebo jej ukončení mobilným systémom stratia. Export stiahne nový zošit; neprepisuje pôvodný súbor.
+Dokument je uložený raz v Dokumenty. Väzby sú v DokumentZariadenia a DokumentRevizie. Revízia vznikne pre každý vybraný plán zvlášť. Rovnaký deň pre rovnaký plán sa pri hromadnom zápise odmietne ako možná duplicita. Starší historický zápis neprepíše aktuálny plán. Stav fyzickej kontroly podkladov sa nemení automaticky.
 
-Ukážkové záznamy sú fiktívne. Údaje z importovaného zošita ani PDF aplikácia neposiela na server. Skripty a štýly sú pribalené; nepoužíva analytiku, externé fonty ani CDN.
+PDF sa nekopíruje ani nevkladá do XLSX. Ulož ho do svojho úložiska; aplikácia eviduje jeho cestu/odkaz. Webový odkaz sa dá otvoriť v karte dokumentu, lokálne PDF cez výber súboru.
 
-## GitHub Pages
+Údaje sú iba v pamäti stránky. Neexportované zmeny sa po obnovení alebo zatvorení stratia, aj keď mobilný systém ukončí stránku na pozadí. Zálohovanie ani automatická synchronizácia zatiaľ nie sú zapojené. Po exporte over, že prehliadač súbor skutočne stiahol, a ulož ho na OneDrive.
 
-Do vybraného repozitára vlož **rozbalený obsah tohto ZIP balíka** (index.html musí byť v koreňovom priečinku zverejňovanej vetvy). V Settings → Pages nastav zdroj na príslušnú vetvu a koreňový priečinok. Súbor `.nojekyll` ponechaj. Cesty sú relatívne, takže aplikácia funguje aj na adrese s názvom repozitára.
+## GitHub Pages a telefón
 
-Do repozitára nenahrávaj Excel s firemnými údajmi ani PDF. Nie sú potrebné na spustenie aplikácie. Otvárajú sa až v prehliadači konkrétneho používateľa.
+Rozbaľ celý balík Revizie_SPS_PWA_v1.3.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.3.
 
-## Podporovaný zošit
+Android / Chrome: otvor svoju webovú adresu online, potom menu ⋮ → Pridať na plochu → Inštalovať. Alebo použi tlačidlo Nainštalovať aplikáciu, keď ho Chrome ponúkne. iPhone / Safari: Zdieľať → Pridať na plochu (Otvoriť ako webovú aplikáciu, ak sa ponúkne).
 
-Povinné hárky: Zariadenia, PlanKontrol, Revizie, Strediska, DruhyKontrol. Kategórie, parametre a dokumenty sa načítajú, ak existujú. Podporované je pole KontrolaPodkladov aj staršie OverenieUdajov. Import zachová všetky hárky a Excel balík. Export mení zvolené bunky a rozširuje tabuľku Revizie pri novom zázname. Vstupný súbor musí používať štandardný dátumový systém 1900, nie 1904.
+Po hlásení, že je offline režim pripravený, sa samotná aplikácia otvorí aj bez internetu. XLSX a PDF musia byť uložené v telefóne; odkazy na OneDrive potrebujú internet. Vymazanie údajov prehliadača môže odstrániť offline kópiu, vtedy otvor aplikáciu znovu online.
 
-Pravidlá výhľadu sú v `core.js`, import/export v `excel.js` a ovládanie v `app.js`. Nevyžadované kontroly a vyradené zariadenia sú neaktívne. Neskontrolované podklady a neoverené termíny patria do prehľadu Na overenie. Intervaly sú prevzaté zo zošita; aplikácia ich neposudzuje podľa legislatívy. Neplatný výsledok revízie sa automaticky nemení na stav vyradeného zariadenia.
+Inštalácia NEUKLADÁ rozpracované údaje. Naďalej treba exportovať XLSX. Pred zatvorením či aktualizáciou exportuj. Nová verzia sa pripraví pri online návšteve a použije po zatvorení všetkých okien tejto aplikácie; neobnovuje rozpracovanú stránku automaticky.
 
-Dokumenty sa zobrazujú ako evidencia zo zošita. Lokálne PDF je možné otvoriť, ale nepripája sa automaticky k zariadeniu. OneDrive API a používateľské účty nie sú súčasťou tejto verzie.
+## Zdroj a overenie
 
-## Závislosti
-
-Pribalené JSZip a xml-js. Ich licencie sú v `vendor/`. Testy importu, exportu, referencií a dátumových hraníc sa spúšťajú cez `node tests.cjs` v prostredí s dostupnými balíkmi jszip a xml-js.
+Zdrojové súbory sú v dist, šablóna v index.source.html. Po úpravách spusti node scripts/build-standalone.cjs. Testovacie dáta sú výlučne v demo-fixture.cjs, do publikovaného súboru sa nevkladajú. Testy: tests.cjs, bulk-test.cjs, standalone-test.cjs, smoke.cjs. Smoke je test udalostí s náhradným DOM, nie test vzhľadu v prehliadači.

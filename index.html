@@ -8,17 +8,19 @@
 [hidden]{display:none!important}
 
 .bulk-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 20px;background:#f1f6f7;border-block:1px solid #dde6e9}.bulk-item{padding:16px 0;border-bottom:1px solid #dde6e9}.bulk-item>small{display:block;margin:4px 0 12px;color:#667985}input[type=checkbox]{width:20px;height:20px;accent-color:#226a70}button:disabled{opacity:.45;cursor:not-allowed}.dialog-body>p,.dialog-body details p{overflow-wrap:anywhere}
-</style></head>
+
+.pwa-status{font-size:12px;color:#526a78;margin:10px 0 18px;line-height:1.5}#installHelp{max-width:640px}body{padding-bottom:env(safe-area-inset-bottom)}
+</style><meta name="revizie-app" content="1.3"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Revízie SPS"></head>
 <body>
 <aside class="sidebar"><a class="brand" href="#" aria-label="Revízie SPS – prehľad"><span class="logo">R<span>•</span></span><div>Revízie <strong>SPS</strong><small>SPRÁVA TECHNICKÝCH ZARIADENÍ</small></div></a><div class="workspace"><span class="work-dot"></span> Pracovný priestor <span class="demo-tag">XLSX</span></div><nav aria-label="Hlavná navigácia"><button data-view="overview" class="nav active"><span>▦</span> Prehľad revízií</button><button data-view="devices" class="nav"><span>▤</span> Zariadenia</button><button data-view="documents" class="nav"><span>▧</span> Dokumenty</button><button data-view="help" class="nav"><span>?</span> Ako to funguje</button></nav><div class="side-note"><span class="shield">✓</span><strong>Súbor zostáva u teba</strong><p>Údaje sa spracujú iba v tomto prehliadači.</p><span class="tiny">Bez automatickej synchronizácie</span></div><div class="side-bottom"><span class="avatar">M</span><div>Pracovná evidencia<small>Pripravená pre PC aj mobil</small></div></div></aside>
 <main><header class="topbar"><span>Evidencia / <b id="breadcrumb">Prehľad revízií</b></span><span id="today"></span></header>
-<section class="heading"><div><p class="eyebrow">TECHNICKÁ SPRÁVA BUDOV</p><h1 id="title">Prehľad revízií</h1><p id="subtitle">Všetky dôležité termíny na jednom mieste.</p></div><div class="actions"><button id="importBtn" class="button white">↥ Načítať Excel</button><button id="exportBtn" class="button primary">↧ Exportovať Excel</button></div></section>
+<section class="heading"><div><p class="eyebrow">TECHNICKÁ SPRÁVA BUDOV</p><h1 id="title">Prehľad revízií</h1><p id="subtitle">Všetky dôležité termíny na jednom mieste.</p></div><div class="actions"><button id="installApp" class="button white">Pridať do telefónu</button><button id="importBtn" class="button white">↥ Načítať Excel</button><button id="exportBtn" class="button primary">↧ Exportovať Excel</button></div></section>
 <input type="file" id="file" accept=".xlsx" hidden><input type="file" id="pdf" accept="application/pdf,.pdf" hidden>
 <div class="source-bar"><div><span class="status-dot"></span><strong id="sourceName">Žiadny načítaný súbor</strong><span id="sourceHint">Načítaj posledný uložený XLSX.</span></div><div><span id="dirty">Bez zmien</span></div></div>
-<section id="filters" class="filters"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Hľadať zariadenie, ID alebo kontrolu…" aria-label="Vyhľadať"></label><label>Stredisko<select id="site"><option value="">Všetky strediská</option></select></label><label>Kategória<select id="category"><option value="">Všetky kategórie</option></select></label><label class="horizon">Výhľad <span><input id="months" type="number" min="1" max="36" value="1" aria-label="Výhľad v mesiacoch"> mes.</span></label></section>
+<p id="offlineStatus" class="pwa-status" role="status">Príprava offline režimu…</p><section id="filters" class="filters"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Hľadať zariadenie, ID alebo kontrolu…" aria-label="Vyhľadať"></label><label>Stredisko<select id="site"><option value="">Všetky strediská</option></select></label><label>Kategória<select id="category"><option value="">Všetky kategórie</option></select></label><label class="horizon">Výhľad <span><input id="months" type="number" min="1" max="36" value="1" aria-label="Výhľad v mesiacoch"> mes.</span></label></section>
 <div id="content" aria-live="polite"></div>
-<footer>Revízie SPS <span>•</span> Pracovná evidencia v1.2 <span class="footer-right">Zmeny uchováš exportom do Excelu.</span></footer></main>
-<dialog id="detail"><div id="detailBody"></div></dialog><div id="toast" role="status"></div>
+<footer>Revízie SPS <span>•</span> Pracovná evidencia v1.3 <span class="footer-right">Zmeny uchováš exportom do Excelu.</span></footer></main>
+<dialog id="installHelp"><div class="dialog-head"><h2>Revízie SPS v telefóne</h2><button class="close" id="closeInstallHelp" aria-label="Zavrieť">×</button></div><div class="dialog-body"><p><b>Android / Chrome:</b> otvor túto webovú adresu v Chrome, potom menu ⋮ → Pridať na plochu → Inštalovať. Ak sa zobrazí tlačidlo Nainštalovať aplikáciu, môžeš použiť aj to.</p><p><b>iPhone / Safari:</b> Zdieľať → Pridať na plochu. Ak sa zobrazí možnosť Otvoriť ako webovú aplikáciu, zapni ju.</p><p>Po prvom úspešnom načítaní online a hlásení o pripravenom offline režime sa aplikácia otvorí aj bez internetu. XLSX a PDF musia byť stiahnuté v telefóne.</p><p><b>Zmeny priebežne exportuj.</b> Inštalácia aplikácie neukladá rozpracovaný XLSX. Po zatvorení alebo ukončení aplikácie systémom sa neexportované zmeny stratia.</p><p>Aktualizácia sa použije po zavretí všetkých okien aplikácie. Najskôr exportuj údaje.</p></div></dialog><dialog id="detail"><div id="detailBody"></div></dialog><div id="toast" role="status"></div>
 <script>
 (function(){var module={exports:{}},exports=module.exports,define;
 /*!
@@ -284,6 +286,27 @@ window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.return
 $('today').textContent=new Intl.DateTimeFormat('sk-SK',{day:'numeric',month:'long',year:'numeric'}).format(new Date());
 document.querySelector('.brand').onclick=e=>{e.preventDefault();view='overview';render();};
 render();
+})();
+
+</script><script>
+(function(){'use strict';
+const button=document.getElementById('installApp'),status=document.getElementById('offlineStatus'),help=document.getElementById('installHelp');let promptEvent=null;
+const standalone=()=>window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+function label(){button.textContent=standalone()?'Aplikácia v telefóne':'Pridať do telefónu';}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();promptEvent=e;button.textContent='Nainštalovať aplikáciu';});
+window.addEventListener('appinstalled',()=>{promptEvent=null;label();});
+button.onclick=async()=>{if(promptEvent){const e=promptEvent;promptEvent=null;try{await e.prompt();await e.userChoice;}catch{}label();}else help.showModal();};
+document.getElementById('closeInstallHelp').onclick=()=>help.close();label();
+if(!('serviceWorker' in navigator)||!window.isSecureContext){status.textContent='Inštalácia a offline režim vyžadujú webovú adresu HTTPS.';return;}
+window.addEventListener('load',async()=>{try{
+ const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});
+ const updateNotice=()=>{status.textContent='Nová verzia pripravená. Exportuj zmeny a zavri všetky okná tejto aplikácie. Po ďalšom otvorení sa aktualizuje.';};
+ const ready=()=>{status.textContent='Aplikácia je pripravená aj bez internetu. XLSX si ulož do telefónu; zmeny uchováš exportom.';};
+ if(registration.waiting)updateNotice();else if(registration.active)ready();
+ registration.addEventListener('updatefound',()=>{const worker=registration.installing;if(!worker)return;worker.addEventListener('statechange',()=>{if(worker.state==='installed'){if(registration.active)updateNotice();else ready();}});});
+ navigator.serviceWorker.ready.then(()=>{if(!registration.waiting)ready();});
+ }catch{status.textContent='Offline režim sa nepodarilo pripraviť. Over, či sú na GitHube nahrané všetky súbory z balíka.';}
+});
 })();
 
 </script>
