@@ -1,4 +1,4 @@
-# Revízie SPS – pracovná evidencia v1.4
+# Revízie SPS – pracovná evidencia v1.5
 
 Aplikácia sa spustí bez dát. Vždy načítaj posledný exportovaný XLSX cez Načítať Excel.
 
@@ -27,7 +27,7 @@ Pri prenose: exportuj v telefóne → ulož/prenes súbor cez OneDrive → na PC
 
 ## GitHub Pages a telefón
 
-Rozbaľ celý balík Revizie_SPS_PWA_v1.4.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.4.
+Rozbaľ celý balík Revizie_SPS_PWA_v1.5.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.5.
 
 Android / Chrome: otvor svoju webovú adresu online, potom menu ⋮ → Pridať na plochu → Inštalovať. Alebo použi tlačidlo Nainštalovať aplikáciu, keď ho Chrome ponúkne. iPhone / Safari: Zdieľať → Pridať na plochu (Otvoriť ako webovú aplikáciu, ak sa ponúkne).
 
@@ -38,3 +38,9 @@ Miestne automatické uloženie nenahrádza export pre prenos medzi zariadeniami.
 ## Zdroj a overenie
 
 Zdrojové súbory sú v dist, šablóna v index.source.html. Po úpravách spusti node scripts/build-standalone.cjs. Testovacie dáta sú výlučne v demo-fixture.cjs, do publikovaného súboru sa nevkladajú. Testy: tests.cjs, bulk-test.cjs, standalone-test.cjs, smoke.cjs. Smoke je test udalostí s náhradným DOM, nie test vzhľadu v prehliadači.
+
+## Karta zariadenia
+
+V detaile zariadenia zvoľ Tlačiť kartu. V zozname môžeš označiť viac zariadení a zvoliť Tlačiť karty. Predvolene sú riadky revízií prázdne na ručné zápisy; voľba Vyplniť evidovanú históriu doplní nezrušené záznamy. Historický interval sa nedopočítava z dnešného intervalu: doplň ho podľa papierovej správy.
+
+Tlač / PDF používa A4 na výšku a ľavý okraj 18 mm na zakladanie. V tlačovom dialógu vypni hlavičky a päty prehliadača. Každé zariadenie začína na novej strane; dlhšie poznámky či história môžu pokračovať na ďalšej. Tlačia sa potvrdené údaje zo zošita vrátane miestnych úprav, nie rozpísaný formulár. Tlač nemení údaje.
