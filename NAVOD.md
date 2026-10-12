@@ -1,4 +1,4 @@
-# Revízie SPS – pracovná evidencia v1.7
+# Revízie SPS – pracovná evidencia v1.8
 
 Aplikácia sa spustí bez dát. Vždy načítaj posledný exportovaný XLSX cez Načítať Excel.
 
@@ -36,13 +36,17 @@ Po načítaní a každej potvrdenej úprave sa uloží miestna pracovná kópia.
 
 Záloha je v tomto profile prehliadača a na tejto webovej adrese. Nie je synchronizovaná medzi telefónom a PC ani medzi GitHub a ChatGPT verziou. Vymazanie údajov webu, anonymný režim či zásah prehliadača môže zálohu odstrániť. Pravidelne exportuj. Pri načítaní iného zošita sa aktuálna miestna kópia nahradí; pri neexportovaných zmenách sa zobrazí potvrdenie.
 
-Export má názov napríklad real_export_2026-10-09_22-49-48_d8c2e980.xlsx. Čas je v pásme Europe/Bratislava. Dátum/čas a jedinečné ID sú tiež vo vlastných vlastnostiach XLSX a zobrazia sa po načítaní aj pri premenovaní súboru. Exportovaný súbor musíš skutočne stiahnuť; aplikácia nevie potvrdiť dokončenie sťahovania. Údaj označuje export z tejto aplikácie, nie následné zmeny v Exceli. Čas závisí od správne nastavených hodín exportujúceho zariadenia.
+Export má názov napríklad real_export_261012.01.xlsx. Verzia súboru 261012.01 je viditeľná hneď vedľa „Súbor a verzia“, aj keď je panel zbalený. Formát rrmmdd.xx znamená dátum exportu v Bratislave a poradové číslo exportu v daný deň. Po exporte zostáva stav Bez zmien, po úprave sa zobrazí počet neexportovaných zmien. Číslo sa mení pri exporte, nie pri každej úprave.
+
+Poradie sa počíta z načítanej verzie a exportov známych tomuto prehliadaču. Pri prenose aktuálneho XLSX medzi PC a mobilom číslovanie nadviaže na jeho číslo. Nezávislé vetvy toho istého súboru na rôznych zariadeniach môžu dostať rovnaké krátke číslo; krátke číslo nie je globálny identifikátor. Presný čas zostáva v rozbalenom paneli, plné jedinečné ID vo vlastnostiach XLSX. Pri exporte, ktorý sa nepodarí dokončiť, môže zostať medzera v poradí. Staršie exporty zobrazujú dátum s .—, neoznačené súbory —; poradové číslo získajú pri ďalšom exporte.
+
+Exportovaný súbor musíš skutočne stiahnuť; aplikácia nevie potvrdiť dokončenie sťahovania. Údaj označuje export z tejto aplikácie, nie následné zmeny v Exceli. Čas závisí od správne nastavených hodín exportujúceho zariadenia.
 
 Pri prenose: exportuj v telefóne → ulož/prenes súbor cez OneDrive → na PC načítaj tento XLSX a porovnaj čas a ID. Aplikácia upozorní na starší export, než tento prehliadač už pozná; nevie zistiť novšiu verziu, ktorú ešte nedostal.
 
 ## GitHub Pages a telefón
 
-Rozbaľ celý balík Revizie_SPS_PWA_v1.7.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.7.
+Rozbaľ celý balík Revizie_SPS_PWA_v1.8.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.8.
 
 Android / Chrome: otvor svoju webovú adresu online, potom menu ⋮ → Pridať na plochu → Inštalovať. Alebo použi tlačidlo Nainštalovať aplikáciu, keď ho Chrome ponúkne. iPhone / Safari: Zdieľať → Pridať na plochu (Otvoriť ako webovú aplikáciu, ak sa ponúkne).
 
