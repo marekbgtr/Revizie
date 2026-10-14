@@ -1,4 +1,4 @@
-# Revízie SPS – pracovná evidencia v1.10
+# Revízie SPS – pracovná evidencia v1.11
 
 Aplikácia sa spustí bez dát. Vždy načítaj posledný exportovaný XLSX cez Načítať Excel.
 
@@ -18,7 +18,7 @@ Dokument je uložený raz v Dokumenty. Väzby sú v DokumentZariadenia a Dokumen
 1. Na PC otvor aplikáciu v Chrome alebo Edge cez HTTPS (napríklad na svojom GitHub Pages).
 2. Načítaj aktuálny Excel. V Dokumenty → Vybrať priečinok vyber priečinok na firemnom sieťovom disku, kde tento Excel uchovávaš. Povoľ prehliadaču čítanie aj zápis.
 3. V Zariadeniach označ príslušné zariadenia → Priradiť dokument alebo Zapísať spoločnú revíziu → Nový dokument. Vyber PDF (najviac 50 MB).
-4. Po potvrdení sa PDF uloží do podpriečinka Dokumenty. Názov dostane jedinečný identifikátor; existujúce správy sa neprepisujú. Až po úspešnom uložení pribudne evidencia a väzby.
+4. Po potvrdení sa PDF uloží do podpriečinka strediska. Názov dostane jedinečný identifikátor; existujúce správy sa neprepisujú. Až po úspešnom uložení pribudne evidencia a väzby.
 5. Exportuj Excel a ručne ulož aktuálny export do spoločného priečinka. Export nie je automatický zápis na sieťový disk.
 6. PDF otvoríš v detaile dokumentu cez Otvoriť priradené PDF. Existujúcemu dokumentu bez odkazu môžeš doplniť PDF v jeho detaile.
 
@@ -46,7 +46,7 @@ Pri prenose: exportuj v telefóne → ulož/prenes súbor cez OneDrive → na PC
 
 ## GitHub Pages a telefón
 
-Rozbaľ celý balík Revizie_SPS_PWA_v1.10.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.10.
+Rozbaľ celý balík Revizie_SPS_PWA_v1.11.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.11.
 
 Android / Chrome: otvor svoju webovú adresu online, potom menu ⋮ → Pridať na plochu → Inštalovať. Alebo použi tlačidlo Nainštalovať aplikáciu, keď ho Chrome ponúkne. iPhone / Safari: Zdieľať → Pridať na plochu (Otvoriť ako webovú aplikáciu, ak sa ponúkne).
 
@@ -68,7 +68,7 @@ Tlač / PDF používa A4 na výšku a ľavý okraj 18 mm na zakladanie. V tlačo
 
 Hore zostávajú Načítať Excel, Exportovať Excel a stručný stav miestneho uloženia. Názov súboru, čas/ID exportu a offline stav otvoríš cez Súbor a verzia. Počet neexportovaných zmien zostáva viditeľný aj pri zbalenom detaile. Inštalácia je v Ako to funguje, dostupná aj pred načítaním zošita. Chyby uloženia zostávajú viditeľné; upozornenie na aktualizáciu rozbalí detail.
 
-## Úpravy pri kontrole evidencie – v1.10
+## Úpravy pri kontrole evidencie – v1.11
 
 V karte zariadenia rozbaľ Identifikácia a technické parametre. Uprav identifikáciu aj technické hodnoty a potvrď Uložiť technické parametre. Zobrazia sa aj prázdne parametre definované pre kategóriu zariadenia. Vymazanie hodnoty ponechá parameter prázdny, nula zostane nulou. Úpravy sa ukladajú miestne, do XLSX pri exporte a zobrazia sa aj v tlačenej karte.
 
@@ -76,6 +76,10 @@ Pri kontrole/skúške zvoľ Režim kontroly → Nevyžaduje sa a Uložiť kontro
 
 Pred aktualizáciou exportuj svoju pracovnú kópiu. Nahraď súbory aplikácie na GitHube, zatvor všetky okná aplikácie a otvor ju znovu. Ak sa miestna práca neobnoví, načítaj svoj posledný export. Nový databázový zošit na túto aktualizáciu nie je potrebný.
 
-## Dokument pri novej revízii – v1.10
+## Dokument pri novej revízii – v1.11
 
 V karte zariadenia pri príslušnej kontrole klikni Zapísať revíziu. Formulár predvyberie kontrolu a ponúkne Nový dokument (PDF alebo cesta), Existujúci dokument alebo Bez dokumentu. Pri PDF sa najskôr overia údaje a uloží súbor na disk; až potom vznikne revízia a prepojenia. Po potvrdení sa vrátiš na kartu. Dokument otvoríš aj z riadka histórie revízií. Hromadný výber zariadení zostáva zachovaný.
+
+## Priečinky dokumentov – v1.11
+
+Vyber hlavný priečinok s Excelom. PDF sa ukladajú pod neho podľa Strediska.Priecinok (napríklad 01_ivanka/sprava_UUID.pdf). Pri jednom stredisku sa cieľ predvyplní; pri viacerých vyber jedno cieľové stredisko. Dokument sa uloží raz a všetky zariadenia naň odkazujú. Rovnaké pravidlo platí pri doplnení PDF k existujúcemu dokumentu. Chýbajúci priečinok sa vytvorí pri ukladaní. Cesty sa prenášajú v XLSX. Staršie Dokumenty/… zostávajú funkčné; žiadne súbory sa nepresúvajú.
