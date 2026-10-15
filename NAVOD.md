@@ -1,4 +1,4 @@
-# Revízie SPS – pracovná evidencia v1.13
+# Revízie SPS – pracovná evidencia v1.14
 
 Aplikácia sa spustí bez dát. Vždy načítaj posledný exportovaný XLSX cez Načítať Excel.
 
@@ -46,7 +46,7 @@ Pri prenose: exportuj v telefóne → ulož/prenes súbor cez OneDrive → na PC
 
 ## GitHub Pages a telefón
 
-Rozbaľ celý balík Revizie_SPS_PWA_v1.13.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.13.
+Rozbaľ celý balík Revizie_SPS_PWA_v1.14.zip. Všetky jeho súbory nahraj vedľa seba do priečinka, z ktorého publikuješ GitHub Pages; index.html nahraď. Samotný ZIP nenahrávaj. Potrebné sú index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png a apple-touch-icon.png. Tentoraz nestačí vymeniť iba index.html. V päte musí byť v1.14.
 
 Android / Chrome: otvor svoju webovú adresu online, potom menu ⋮ → Pridať na plochu → Inštalovať. Alebo použi tlačidlo Nainštalovať aplikáciu, keď ho Chrome ponúkne. iPhone / Safari: Zdieľať → Pridať na plochu (Otvoriť ako webovú aplikáciu, ak sa ponúkne).
 
@@ -68,7 +68,7 @@ Tlač / PDF používa A4 na výšku a ľavý okraj 18 mm na zakladanie. V tlačo
 
 Hore zostávajú Načítať Excel, Exportovať Excel a stručný stav miestneho uloženia. Názov súboru, čas/ID exportu a offline stav otvoríš cez Súbor a verzia. Počet neexportovaných zmien zostáva viditeľný aj pri zbalenom detaile. Inštalácia je v Ako to funguje, dostupná aj pred načítaním zošita. Chyby uloženia zostávajú viditeľné; upozornenie na aktualizáciu rozbalí detail.
 
-## Úpravy pri kontrole evidencie – v1.13
+## Úpravy pri kontrole evidencie – v1.14
 
 V karte zariadenia rozbaľ Identifikácia a technické parametre. Uprav identifikáciu aj technické hodnoty a potvrď Uložiť technické parametre. Zobrazia sa aj prázdne parametre definované pre kategóriu zariadenia. Vymazanie hodnoty ponechá parameter prázdny, nula zostane nulou. Úpravy sa ukladajú miestne, do XLSX pri exporte a zobrazia sa aj v tlačenej karte.
 
@@ -76,19 +76,19 @@ Pri kontrole/skúške zvoľ Režim kontroly → Nevyžaduje sa a Uložiť kontro
 
 Pred aktualizáciou exportuj svoju pracovnú kópiu. Nahraď súbory aplikácie na GitHube, zatvor všetky okná aplikácie a otvor ju znovu. Ak sa miestna práca neobnoví, načítaj svoj posledný export. Nový databázový zošit na túto aktualizáciu nie je potrebný.
 
-## Dokument pri novej revízii – v1.13
+## Dokument pri novej revízii – v1.14
 
 V karte zariadenia pri príslušnej kontrole klikni Zapísať revíziu. Formulár predvyberie kontrolu a ponúkne Nový dokument (PDF alebo cesta), Existujúci dokument alebo Bez dokumentu. Pri PDF sa najskôr overia údaje a uloží súbor na disk; až potom vznikne revízia a prepojenia. Po potvrdení sa vrátiš na kartu. Dokument otvoríš aj z riadka histórie revízií. Hromadný výber zariadení zostáva zachovaný.
 
-## Priečinky dokumentov – v1.13
+## Priečinky dokumentov – v1.14
 
 Vyber hlavný priečinok s Excelom. PDF sa ukladajú pod neho podľa Strediska.Priecinok (napríklad 01_ivanka/sprava_UUID.pdf). Pri jednom stredisku sa cieľ predvyplní; pri viacerých vyber jedno cieľové stredisko. Dokument sa uloží raz a všetky zariadenia naň odkazujú. Rovnaké pravidlo platí pri doplnení PDF k existujúcemu dokumentu. Chýbajúci priečinok sa vytvorí pri ukladaní. Cesty sa prenášajú v XLSX. Staršie Dokumenty/… zostávajú funkčné; žiadne súbory sa nepresúvajú.
 
-## Pomocník na názvy súborov – v1.13
+## Pomocník na názvy súborov – v1.14
 
 Pri nahratí PDF sa predvyplní stredisko a kategória, pri jednej revízii aj predmet, mesiac a druh kontroly. Výsledok má formát stredisko_typ_predmet_RRRR-MM_kontrola.pdf. Pri spoločnej správe vyplň rozsah. Názov možno upraviť ručne; nebude sa automaticky prepisovať. Náhľad zobrazuje skutočnú relatívnu cestu vrátane krátkeho identifikátora proti prepísaniu. Kopírovanie vráti čitateľný názov bez identifikátora. Obnoviť návrh znovu zostaví názov z polí. Samostatný pomocník nájdeš v Dokumenty → Vytvoriť názov súboru. Presný dátum revízie sa v evidencii nemení. Ak nenahrávaš PDF, polia pomocníka nie sú povinné. Pôvodný súbor sa nepremenúva.
 
-## Vyplnenosť údajov a firemný vzhľad – v1.13
+## Vyplnenosť údajov a firemný vzhľad – v1.14
 
 V časti Identifikácia a technické parametre vidíš počet vyplnených/všetkých polí (napríklad 5/6). Počíta šesť identifikačných polí aj doplnkové parametre danej kategórie. Mení sa počas písania; zmeny sa ukladajú až tlačidlom. Medzery sú prázdna hodnota, nula je vyplnená. Žiadne nové polia sa nepridávajú a počítadlo neoznačuje legislatívnu úplnosť.
 
@@ -99,3 +99,7 @@ Pri inštalovanej PWA môže systém obnoviť ikonu s oneskorením. Kvôli ikone
 ### Listovanie kartami zariadení
 
 Šípky v hlavičke karty prechádzajú celým zoznamom registra podľa aktuálneho strediska, kategórie a vyhľadávania, aj cez hranice strán. Číslo medzi nimi označuje poradie/počet. Na začiatku a konci je príslušná šípka vypnutá. Ak otvoríš zariadenie mimo filtrov cez dokument, má samostatnú kartu bez susedov. Pri rozpracovaných zmenách musíš pred prepnutím potvrdiť ich zahodenie alebo sa vrátiť a uložiť ich.
+
+## Listovanie v aktuálnom zobrazení – v1.14
+
+Šípky prechádzajú zariadenia z aktuálneho zobrazenia: Po termíne, Blíži sa termín, Na overenie alebo Všetky kontroly. Používajú rovnaké filtre a poradie podľa termínu ako zobrazený prehľad, vrátane strediska, kategórie, vyhľadávania, výhľadu a nastavenia neaktívnych kontrol. Zariadenia sa neopakujú, aj keď majú viac zobrazených kontrol. V registri zostáva poradie registra. Kontext je viditeľný pod poradím karty. Zoznam sa zachytí pri otvorení, takže uloženie opraveného termínu nenaruší rozpracované prechádzanie. Po zatvorení a novom otvorení sa prepočíta podľa aktuálneho zobrazenia.
