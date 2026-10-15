@@ -1,6 +1,6 @@
 'use strict';
 const PREFIX='revizie-sps:'+self.registration.scope+':';
-const CACHE=PREFIX+'ed6168e40e990796';
+const CACHE=PREFIX+'76e833911cea0c2e';
 const names=['index.html','manifest.webmanifest','icon-192.png','icon-512.png','apple-touch-icon.png'];
 const urls=names.map(p=>new URL(p,self.registration.scope).href);
 self.addEventListener('install',event=>{event.waitUntil((async()=>{
